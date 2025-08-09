@@ -1,90 +1,93 @@
+import Image from "next/image";
+import Link from "next/link";
+import { MdHome, MdPeople, MdEmojiPeople, MdManageAccounts, MdOutlineHomeWork, MdOutlineGroups, MdOutlineAddTask, MdEvent, MdOutlineNotificationsActive  } from "react-icons/md";
+import { IoTicketOutline, IoTicket  } from "react-icons/io5";
+import { GoProjectTemplate } from "react-icons/go";
+import { TiMessages } from "react-icons/ti";
+import { CgProfile } from "react-icons/cg";
+import { IoMdSettings, IoIosLogOut  } from "react-icons/io";
+
 const menuItems = [
   {
     title: "MENU",
     items: [
       {
-        icon: "/home.png",
+        icon: <MdHome size={20}/>,
         label: "Home",
         href: "/",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "it", "staff", "hoc"],
       },
       {
-        icon: "/teacher.png",
-        label: "Teachers",
-        href: "/list/teachers",
-        visible: ["admin", "teacher"],
+        icon: <MdManageAccounts size={20}/>,
+        label: "IT Personnel",
+        href: "/list/it",
+        visible: ["admin", "it"],
       },
       {
-        icon: "/student.png",
-        label: "Students",
-        href: "/list/students",
-        visible: ["admin", "teacher"],
+        icon: <MdEmojiPeople size={20}/>,
+        label: "Staff",
+        href: "/list/staff",
+        visible: ["admin", "it"],
       },
       {
-        icon: "/parent.png",
-        label: "Parents",
-        href: "/list/parents",
-        visible: ["admin", "teacher"],
+        icon: <MdPeople size={20}/>,
+        label: "HOC's",
+        href: "/list/hoc",
+        visible: ["admin", "it"],
       },
       {
-        icon: "/subject.png",
-        label: "Subjects",
-        href: "/list/subjects",
+        icon: <MdOutlineHomeWork size={20}/>,
+        label: "Companies",
+        href: "/list/companies",
         visible: ["admin"],
       },
       {
-        icon: "/class.png",
-        label: "Classes",
-        href: "/list/classes",
-        visible: ["admin", "teacher"],
+        icon: <MdOutlineGroups size={20}/>,
+        label: "Groups",
+        href: "/list/groups",
+        visible: ["admin", "it"],
       },
       {
-        icon: "/lesson.png",
-        label: "Lessons",
-        href: "/list/lessons",
-        visible: ["admin", "teacher"],
+        icon: <IoTicketOutline size={20}/>,
+        label: "Tickets",
+        href: "/list/tickets",
+        visible: ["admin", "it"],
       },
       {
-        icon: "/exam.png",
-        label: "Exams",
-        href: "/list/exams",
-        visible: ["admin", "teacher", "student", "parent"],
+        icon: <GoProjectTemplate size={20}/>,
+        label: "Projects",
+        href: "/list/projects",
+        visible: ["admin", "it", "staff", "hoc"],
       },
       {
-        icon: "/assignment.png",
-        label: "Assignments",
-        href: "/list/assignments",
-        visible: ["admin", "teacher", "student", "parent"],
+        icon: <MdOutlineAddTask size={20}/>,
+        label: "Tasks",
+        href: "/list/tasks",
+        visible: ["admin", "it", "staff", "hoc"],
       },
       {
-        icon: "/result.png",
-        label: "Results",
-        href: "/list/results",
-        visible: ["admin", "teacher", "student", "parent"],
+        icon: <IoTicket size={20}/>,
+        label: "Resolved Tickets",
+        href: "/list/resolved-tickets",
+        visible: ["admin", "it", "staff", "hoc"],
       },
       {
-        icon: "/attendance.png",
-        label: "Attendance",
-        href: "/list/attendance",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
-      {
-        icon: "/calendar.png",
+        icon: <MdEvent size={20}/>,
         label: "Events",
         href: "/list/events",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "it", "staff", "hoc"],
       },
       {
-        icon: "/message.png",
+        icon: <TiMessages size={20}/>,
         label: "Messages",
         href: "/list/messages",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "it", "staff", "hoc"],
       },
       {
-        icon: "/announcement.png",
+        icon: <MdOutlineNotificationsActive size={20}/>,
         label: "Announcements",
         href: "/list/announcements",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "it", "staff", "hoc"],
       },
     ],
   },
@@ -92,23 +95,45 @@ const menuItems = [
     title: "OTHER",
     items: [
       {
-        icon: "/profile.png",
+        icon: <CgProfile size={20}/>,
         label: "Profile",
         href: "/profile",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "it", "staff", "hoc"],
       },
       {
-        icon: "/setting.png",
+        icon: <IoMdSettings size={20}/>,
         label: "Settings",
         href: "/settings",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "it", "staff", "hoc"],
       },
       {
-        icon: "/logout.png",
+        icon: <IoIosLogOut size={20}/>,
         label: "Logout",
         href: "/logout",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "it", "staff", "hoc"],
       },
     ],
   },
 ];
+
+const Menu = () => {
+  return (
+    <div className="text-sm">
+      {menuItems.map(i=>(
+        <div className="flex flex-col gap-2 p-4" key={i.title}>
+          <span className="hidden lg:block text-[#AF0404] text-lg my-4">
+            {i.title}
+          </span>      
+          {i.items.map(item => (
+            <Link href={item.href} key={item.label} className="flex items-center justify-center lg:justify-start gap-4 py-2 text-white font-light">
+              {item.icon}
+              <span className="hidden lg:block">{item.label}</span>
+            </Link>
+          ))};
+        </div>
+      ))}
+    </div>
+  )
+};
+
+export default Menu;

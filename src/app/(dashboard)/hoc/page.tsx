@@ -1,7 +1,25 @@
-const HOCPage = () => {
+import Announcements from "@/components/Announcements";
+import BigCalendar from "@/components/BigCalendar";
+import "react-big-calendar/lib/css/react-big-calendar.css"
+
+const HocPage = () => {
   return (
-    <div className=''>HOCPage</div>
+    <div className='p-4 flex flex-1 gap-4 flex-col xl:flex-row'>
+      {/*Left Content */}
+      <div className="w-full xl:w-2/3">
+        <div className="h-full bg-white p-4 rounded-md">
+          <h1 className="text-2xl font-semibold mb-4">Events</h1>
+          <BigCalendar />
+        </div>
+      </div>
+      {/*Right Content */}
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <Announcements />
+      </div>
+    </div>
+
+
   )
 }
 
-export default HOCPage
+export default HocPage

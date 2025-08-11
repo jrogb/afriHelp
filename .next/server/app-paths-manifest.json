@@ -1,8 +1,8 @@
 {
-  "/(dashboard)/list/company/page": "app/(dashboard)/list/company/page.js",
-  "/(dashboard)/list/group/page": "app/(dashboard)/list/group/page.js",
-  "/(dashboard)/list/it/page": "app/(dashboard)/list/it/page.js",
-  "/(dashboard)/list/staff/page": "app/(dashboard)/list/staff/page.js",
-  "/(dashboard)/list/hoc/page": "app/(dashboard)/list/hoc/page.js",
-  "/(dashboard)/list/tickets/page": "app/(dashboard)/list/tickets/page.js"
+  "/page": "app/page.js",
+  "/(dashboard)/admin/page": "app/(dashboard)/admin/page.js",
+  "/(dashboard)/list/tickets/page": "app/(dashboard)/list/tickets/page.js",
+  "/(dashboard)/it/page": "app/(dashboard)/it/page.js",
+  "/(dashboard)/hoc/page": "app/(dashboard)/hoc/page.js",
+  "/(dashboard)/staff/page": "app/(dashboard)/staff/page.js"
 }

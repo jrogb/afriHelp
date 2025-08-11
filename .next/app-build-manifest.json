@@ -1,14 +1,9 @@
 {
   "pages": {
-    "/(dashboard)/list/it/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/list/it/page.js"
-    ],
-    "/(dashboard)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/layout.js"
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -16,27 +11,52 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/(dashboard)/admin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/(dashboard)/admin/page.css",
       "static/chunks/app/(dashboard)/admin/page.js"
     ],
-    "/(dashboard)/staff/page": [
+    "/(dashboard)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(dashboard)/staff/page.css",
-      "static/chunks/app/(dashboard)/staff/page.js"
+      "static/chunks/app/(dashboard)/layout.js"
+    ],
+    "/(dashboard)/list/it/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/it/page.js"
     ],
     "/(dashboard)/list/staff/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(dashboard)/list/staff/page.js"
+    ],
+    "/(dashboard)/list/hoc/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/hoc/page.js"
+    ],
+    "/(dashboard)/list/company/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/company/page.js"
+    ],
+    "/(dashboard)/list/group/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/group/page.js"
+    ],
+    "/(dashboard)/list/tickets/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/tickets/page.js"
+    ],
+    "/(dashboard)/it/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/it/page.css",
+      "static/chunks/app/(dashboard)/it/page.js"
     ],
     "/(dashboard)/hoc/page": [
       "static/chunks/webpack.js",
@@ -44,25 +64,11 @@
       "static/css/app/(dashboard)/hoc/page.css",
       "static/chunks/app/(dashboard)/hoc/page.js"
     ],
-    "/(dashboard)/list/hoc/page": [
+    "/(dashboard)/staff/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/list/hoc/page.js"
-    ],
-    "/(dashboard)/list/group/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/list/group/page.js"
-    ],
-    "/(dashboard)/list/company/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/list/company/page.js"
-    ],
-    "/(dashboard)/list/tickets/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/list/tickets/page.js"
+      "static/css/app/(dashboard)/staff/page.css",
+      "static/chunks/app/(dashboard)/staff/page.js"
     ]
   }
 }

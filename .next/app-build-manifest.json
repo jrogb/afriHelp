@@ -11,16 +11,58 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(dashboard)/admin/page": [
+    "/(dashboard)/it/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(dashboard)/admin/page.css",
-      "static/chunks/app/(dashboard)/admin/page.js"
+      "static/css/app/(dashboard)/it/page.css",
+      "static/chunks/app/(dashboard)/it/page.js"
     ],
     "/(dashboard)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(dashboard)/layout.js"
+    ],
+    "/(dashboard)/list/it/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/it/page.js"
+    ],
+    "/(dashboard)/list/it/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/list/it/[id]/page.css",
+      "static/chunks/app/(dashboard)/list/it/[id]/page.js"
+    ],
+    "/(dashboard)/list/staff/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/list/staff/[id]/page.css",
+      "static/chunks/app/(dashboard)/list/staff/[id]/page.js"
+    ],
+    "/(dashboard)/list/hoc/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/hoc/page.js"
+    ],
+    "/(dashboard)/list/staff/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/staff/page.js"
+    ],
+    "/(dashboard)/list/company/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/company/page.js"
+    ],
+    "/(dashboard)/list/group/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/group/page.js"
+    ],
+    "/(dashboard)/list/tickets/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/list/tickets/page.js"
     ]
   }
 }

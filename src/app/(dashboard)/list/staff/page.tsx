@@ -7,6 +7,7 @@ import Table from "@/components/Table";
 import Link from "next/link";
 import { FaEye } from "react-icons/fa6";
 import { staffData, role } from "@/lib/data";
+import FormModal from "@/components/FormModal";
 
 type Staff = {
   id: number;
@@ -48,7 +49,7 @@ const columns = [
     header: "Actions",
     accessor: "action",
   },
-  
+
 ]
 
 const StaffListPage = () => {
@@ -74,19 +75,18 @@ const StaffListPage = () => {
       <td>
         <div className="flex items-center gap-2">
           <Link href={`/list/it/${item.id}`}>
-            <button className="flex items-center justify-center rounded-full bg-afrired text-white w-8 h-8">
-              <FaEye width={16} height={16}/>
-            </button>
+            {role === "admin" && (
+              <FormModal table="staff" type="update" data={item} />
+            )}
           </Link>
-          {role === "admin" && (<button className="flex items-center justify-center rounded-full bg-afrired text-white w-8 h-8">
-            <MdDeleteForever width={16} height={16}/>
-          </button>
+          {role === "admin" && (
+            <FormModal table="staff" type="delete" id={item.id} />
           )}
         </div>
       </td>
     </tr>
 
-        )
+  )
 
 
   return (
@@ -97,20 +97,20 @@ const StaffListPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <TableSearch />
           <div className="flex items-center gap-4 self-end">
-            {role === "admin" && (<button className="w-8 h-8 flex items-center justify-center rounded-full bg-afrired text-white">
-              <IoPersonAdd width={8} height={8}/>
-            </button>)}
+            {role === "admin" && (
+              <FormModal table="staff" type="create" />
+            )}
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-afrired text-white">
-              <MdOutlineSortByAlpha width={8} height={8}/>
+              <MdOutlineSortByAlpha width={8} height={8} />
             </button>
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-afrired text-white">
-              <MdFilterAlt width={8} height={8}/>
+              <MdFilterAlt width={8} height={8} />
             </button>
           </div>
         </div>
       </div>
       {/* List */}
-      <Table columns={columns} renderRow={renderRow} data={staffData}/>
+      <Table columns={columns} renderRow={renderRow} data={staffData} />
       {/* Pagination */}
       <Pagination />
     </div>

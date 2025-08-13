@@ -1,7 +1,0 @@
-{
-  "/(dashboard)/list/it/page": "app/(dashboard)/list/it/page.js",
-  "/(dashboard)/list/staff/page": "app/(dashboard)/list/staff/page.js",
-  "/(dashboard)/list/company/page": "app/(dashboard)/list/company/page.js",
-  "/(dashboard)/list/tickets/page": "app/(dashboard)/list/tickets/page.js",
-  "/(dashboard)/list/it/[id]/page": "app/(dashboard)/list/it/[id]/page.js"
-}

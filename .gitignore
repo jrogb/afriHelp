@@ -4,3 +4,6 @@ next-env.d.ts
 next.config.mjs
 postcss.config.mjs
 package-lock.json
+/src/generated/prisma
+.env
+prisma

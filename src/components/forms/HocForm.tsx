@@ -6,6 +6,9 @@ import { useForm } from "react-hook-form";
 import InputField from "../InputField";
 import { IoCloudUploadOutline } from "react-icons/io5";
 
+
+
+
 const schema = z.object({
     username: z
         .string()
@@ -63,7 +66,7 @@ const schema = z.object({
 
 type Inputs = z.infer<typeof schema>;
 
-const ItForm = ({
+const HocForm = ({
     type,
     data,
 }: {
@@ -85,7 +88,7 @@ const ItForm = ({
 
     return (
         <form className="flex flex-col gap-8" onSubmit={onSubmit}>
-            <h1 className="text-bold">Add a new IT member</h1>
+            <h1 className="text-bold">Add a new HOC</h1>
             <span className="text-xs text-gray-400 text-light">Account Information</span>
             <div className="flex justify-between gap-4 flex-wrap">
                 <InputField label="Username" name="username" defaultValue={data?.username} register={register} error={errors?.username} />
@@ -123,4 +126,4 @@ const ItForm = ({
     );
 };
 
-export default ItForm;
+export default HocForm;

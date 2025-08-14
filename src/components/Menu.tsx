@@ -57,19 +57,19 @@ const menuItems = [
       {
         icon: <MdEvent size={20} />,
         label: "Events",
-        href: "/events",
+        href: "/list/events",
         visible: ["admin", "it", "staff", "hoc"],
       },
       {
         icon: <TiMessages size={20} />,
         label: "Messages",
-        href: "/messages",
+        href: "/list/messages",
         visible: ["admin", "it", "staff", "hoc"],
       },
       {
         icon: <MdOutlineNotificationsActive size={20} />,
         label: "Announcements",
-        href: "/announcements",
+        href: "/list/announcements",
         visible: ["admin", "it", "staff", "hoc"],
       },
     ],

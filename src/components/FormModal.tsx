@@ -70,7 +70,7 @@ const forms: {
 };
 
 
-const FormModal = ({ table, type, data, id }: { table: "it" | "staff" | "hoc" | "group" | "company" | "ticket" | "events" | "announcements" | "messages"; type: "create" | "update" | "delete"; data?: any; id?: number }) => {
+const FormModal = ({ table, type, data, id }: { table: "it" | "staff" | "hoc" | "group" | "company" | "ticket" | "events" | "announcements" | "messages"; type: "create" | "update" | "delete"; data?: any; id?: string }) => {
 
     const size = type === "create" ? "w-8 h-8" : "w-7 h-7";
     const icon = type === "create" ? <IoPersonAdd /> : type === "update" ? <FaEye /> : <MdDeleteForever />;
